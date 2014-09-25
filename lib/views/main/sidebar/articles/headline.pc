@@ -1,0 +1,1 @@
+<li class="article-headline-{{model.type}}">{{ html: model.title }}</li>

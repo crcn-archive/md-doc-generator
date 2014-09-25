@@ -1,0 +1,19 @@
+<div class="article-header">
+  <h1> {{ model.name }} </h1>
+  <i>latest v{{ model.version }}</i>
+  <p> {{ model.description }}</p>
+  
+  <div class="links">
+
+    {{#if:model.repository}}
+      <a href="{{model.repository}}">Github</a>
+    {{/}}
+    <a href="https://www.npmjs.org/package/{{model.name}}">npm</a>
+  </div>
+</div>
+
+<div class="article-content">
+  {{ html: model.article.content }}
+</div>
+
+<br />

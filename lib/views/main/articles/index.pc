@@ -1,0 +1,3 @@
+<div id="articles" class="col-sm-9">
+  {{ html: sections.articles }}
+</div>

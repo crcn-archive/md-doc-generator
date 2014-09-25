@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+
+
+    <style>
+
+      #docs {
+        margin: 20px;
+      }
+
+
+      #sidebar-inner {
+        position: fixed;
+        height: 100%;
+        overflow: scroll;
+        width: inherit;
+      }
+
+      #articles {
+        padding-left: 30px;
+      }
+
+      #article-headlines {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .article-headline-h1 {
+        padding-left: 0px;
+        font-weight: bold;
+      }
+
+      .article-headline-h2 {
+        padding-left: 5px;
+        font-weight: bold;
+      }
+
+      .article-headline-h3 {
+        padding-left: 10px;
+      }
+
+      .article-headline-h4 {
+        padding-left: 15px;
+      }
+
+      #article-headlines li {
+        list-style-position:inside;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;  
+      }
+
+      .article-header {
+        border: 1px solid #CCC;
+        padding: 20px;
+        border-radius: 4px;
+      }
+
+      .article-header h1 {
+        margin: 0px;
+      }
+
+      .article-header p {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin: 0px;
+      }
+
+      .border-right {
+      }
+
+      .article-header a {
+        padding-right: 5px;
+        padding-left: 5px;
+        border-right: 1px solid #CCC;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+
+      .article-header a:first-child {
+        padding-left: 0px;
+      }
+
+      .article-header a:last-child {
+        border-right: 0px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="docs">
+      <div class="row">
+        {{ html: sections.sidebar }}
+        {{ html: sections.articles }}
+      </div>
+    </div>
+  </body>
+</html>
