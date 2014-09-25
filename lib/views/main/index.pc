@@ -16,6 +16,8 @@
         height: 100%;
         overflow: scroll;
         width: inherit;
+        padding-bottom: 30px;
+        padding-top: 30px;
       }
 
       #articles {
@@ -40,6 +42,7 @@
 
       .article-headline-h3 {
         padding-left: 10px;
+        font-weight: bold;
       }
 
       .article-headline-h4 {
