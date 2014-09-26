@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+
+var opts = require("nomnom").parse(),
+generator = require("../");
+
+generator.generate(require(opts._[0].replace(/^\./, process.cwd())));

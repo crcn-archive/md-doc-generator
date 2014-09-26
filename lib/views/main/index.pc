@@ -35,7 +35,7 @@
         overflow: scroll;
         width: inherit;
         padding-bottom: 30px;
-        padding-top: 30px;
+        padding-top: 10px;
       }
 
       #articles {
@@ -112,30 +112,6 @@
     </style>
   </head>
   <body>
-
-
-    <div id="docs">
-      <div class="row">
-        {{ html: sections.sidebar }}
-        {{ html: sections.articles }}
-      </div>
-    </div>
-
-    <script type="text/javascript">
-      var onHashChange = window.onhashchange = function () {
-        var headline = $("#articles").find('*[id="'+location.hash.substr(1)+'"]');
-
-        if (!headline.length) return;
-
-        headline[0].scrollIntoView(true);
-
-        return;
-
-        $('html, body').animate({
-            scrollTop: headline.offset().top - 200
-        }, 100);
-      };
-      onHashChange();
-    </script>
+    {{ html: sections.body }}
   </body>
 </html>
