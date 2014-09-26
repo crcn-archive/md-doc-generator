@@ -1,6 +1,6 @@
 {
   "name": "md-doc-generator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "md-doc-generator ================",
   "main": "./lib/index.js",
   "scripts": {
@@ -23,6 +23,7 @@
     "glob": "^4.0.6",
     "marked": "^0.3.2",
     "nomnom": "^1.8.0",
+    "paperclip": "^0.4.11",
     "rmdir": "^1.0.4"
   }
 }
