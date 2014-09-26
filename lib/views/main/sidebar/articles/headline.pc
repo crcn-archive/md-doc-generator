@@ -1,1 +1,5 @@
-<li class="article-headline-{{model.type}}">{{ html: model.title }}</li>
+<li class="article-headline-{{model.type}}">
+  <a href="#{{model.link}}">
+    {{ html: model.title }}
+  </a>
+</li>

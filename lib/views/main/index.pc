@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" />
 
 
     <style>
@@ -10,6 +11,23 @@
         margin: 20px;
       }
 
+      .headline {
+        position: relative;
+        left: -23px;
+        padding-left: 23px;
+      }
+
+      .headline a.link {
+        display: none;
+        position: absolute;
+        font-size: 18px;
+        left: 0px;
+        top: 2px;
+      }
+
+      .headline:hover a {
+        display: inline-block;
+      }
 
       #sidebar-inner {
         position: fixed;
@@ -94,11 +112,26 @@
     </style>
   </head>
   <body>
+
+
     <div id="docs">
       <div class="row">
         {{ html: sections.sidebar }}
         {{ html: sections.articles }}
       </div>
     </div>
+
+    <script type="text/javascript">
+      var onHashChange = window.onhashchange = function () {
+        var headline = $("#articles").find('*[id="'+location.hash.substr(1)+'"]');
+
+        if (!headline.length) return;
+
+        $('html, body').animate({
+            scrollTop: headline.offset().top - 200
+        }, 100);
+      };
+      onHashChange();
+    </script>
   </body>
 </html>
