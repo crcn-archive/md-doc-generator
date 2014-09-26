@@ -12,12 +12,17 @@
 
     if (!headline.length) return;
 
-    headline[0].scrollIntoView(true);
+    var offset = 80;
 
-    return;
+    console.log("FF");
+    console.log(headline.offset().top);
+
+    if (headline.offset().top == offset) {
+      return;
+    }
 
     $('html, body').animate({
-        scrollTop: headline.offset().top - 200
+        scrollTop: headline.offset().top - offset
     }, 100);
   };
   onHashChange();

@@ -1,5 +1,7 @@
 
+<hr />
 <strong>{{model.name}}</strong>
+<hr />
 <ul id="article-headlines">
   {{ html: sections.headlines }}
 </ul>
