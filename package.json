@@ -1,6 +1,6 @@
 {
   "name": "md-doc-generator",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "md-doc-generator ================",
   "main": "./lib/index.js",
   "scripts": {
@@ -22,6 +22,9 @@
   "dependencies": {
     "glob": "^4.0.6",
     "marked": "^0.3.2",
+    "mojo-application": "0.0.17",
+    "mojo-paperclip": "^0.5.4",
+    "mojo-views": "^0.1.26",
     "nomnom": "^1.8.0",
     "paperclip": "^0.4.11",
     "rmdir": "^1.0.4"
